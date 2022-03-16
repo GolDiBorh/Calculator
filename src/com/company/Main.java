@@ -5,9 +5,8 @@ import java.util.Scanner;
 public class Main  {
 
     public static void main(String[] args) {
-        int t1 = 6;
         System.out.println("Для последней попытки работы с калькулятором введите [7 * 7]");
-        while (t1>0) {
+        while (true) {
 
             String b1 = "";
             String b2 = "";
