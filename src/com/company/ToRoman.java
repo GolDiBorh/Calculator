@@ -42,6 +42,5 @@ public class ToRoman {
         }
         if (s!=z) return s;
         else throw new NumberFormatException("В римской системе нет отриц. чисел");
-
     }
 }

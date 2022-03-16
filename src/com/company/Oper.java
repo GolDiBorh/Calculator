@@ -13,7 +13,14 @@ public class Oper {
                break;
                case "-": t= a - b;
                break;
-               case "/": t= a / b;
+               case "/":
+               try {
+
+                       t = a / b;
+               }
+               catch (ArithmeticException e){
+                   throw new ArithmeticException("Деление на ноль");
+               }
                break;
                case "*": t= a * b;
                break;
@@ -21,6 +28,7 @@ public class Oper {
                     throw new IllegalArgumentException("Не верный знак операции");
             }
         }
+        if (a > 10 | b > 10) throw new NumberFormatException("Неверный формат данных");
         if (a == 0 | b == 0) throw new NumberFormatException("Неверный формат данных");
         return t;
             }
